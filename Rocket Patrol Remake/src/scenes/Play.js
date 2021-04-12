@@ -28,21 +28,28 @@ class Play extends Phaser.Scene {
             this,
             100,
             200,
-            'spaceship'
+            'spaceship',
+            30,
+            30
+
         );
 
         this.ship2 = new Ship(
             this,
             300,
             240,
-            'spaceship'
+            'spaceship',
+            30,
+            30
         );
 
         this.ship3 = new Ship(
             this,
             380,
             300,
-            'spaceship'
+            'spaceship',
+            30,
+            30
         );
 
         // green UI background
@@ -105,15 +112,18 @@ class Play extends Phaser.Scene {
         // check collisions
         if(this.checkCollision(this.p1Rocket, this.ship3)) {
             this.p1Rocket.reset();
-            this.shipExplode(this.ship3);   
+            this.shipExplode(this.ship3);
+              
         }
         if (this.checkCollision(this.p1Rocket, this.ship2)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship2);
+            
         }
         if (this.checkCollision(this.p1Rocket, this.ship1)) {
             this.p1Rocket.reset();
             this.shipExplode(this.ship1);
+            
         }
         
     }
@@ -143,6 +153,7 @@ class Play extends Phaser.Scene {
         });
         // score add and repaint
         this.p1Score += ship.points;
-        this.scoreLeft.text = this.p1Score;       
+        this.scoreLeft.text = this.p1Score;  
+        console.log("ahhhh");     
       }
 }
