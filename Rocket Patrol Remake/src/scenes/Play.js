@@ -29,7 +29,7 @@ class Play extends Phaser.Scene {
             100,
             200,
             'spaceship',
-            30,
+            0,
             30
 
         );
@@ -39,7 +39,7 @@ class Play extends Phaser.Scene {
             300,
             240,
             'spaceship',
-            30,
+            0,
             30
         );
 
@@ -48,7 +48,7 @@ class Play extends Phaser.Scene {
             380,
             300,
             'spaceship',
-            30,
+            0,
             30
         );
 
